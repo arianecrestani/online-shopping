@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav-bar {
+    background-color: powderblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+    padding: 1rem;
+}
+.logo {
+    font-family: 'Shalimar', cursive;
+    font-size: 2.5rem;
+}
+.nav-links {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+.nav-links li {
+    list-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.nav-icons .fas{
+    font-size: 1.5rem;
+
+}
+.nav-icons .fa-shopping-cart {
+    margin-right: 10px;
+}
