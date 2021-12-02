@@ -5,10 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a0e4aef26a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/header.css"/>
     <title>onlineShopping</title>
 </head>
 <body>
+    <header>
+        <nav class="nav-bar">
+            <h1 class="logo">online-shopping</h1>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#"><i class="fas fa-heart"></i></a>
+            </div>
+        </nav>
+    </header>
     <button onclick="getProducts()">Get Products</button>
     <div id="My products"></div>
     <script src="index.js"></script>
