@@ -45,21 +45,19 @@ const createRating = (rating) => {
     return ratingDiv;
 };
 
-const imagePosterDiv = (result) =>{
-    const imagePoster = document.createElement("div");
-    imagePoster.id = "imageSection";
-
-    const image = createImage(result.image);
-    image.src = result.image;
-    imagePoster.appendChild(image);
-
-    return imagePoster
-}
 
 const createProductSection = (result) => {
+
    
     const div = document.createElement("div");
     div.id = "productSection";
+
+    const divImage = document.createElement('div')
+    divImage.appendChild(div)
+
+    const image = createImage(result.image);
+    image.src = result.image;
+    div.appendChild(image);
   
     const title = createTitle(result.title);
     div.appendChild(title);
@@ -92,8 +90,6 @@ const updateUi = (json) => {
             rating: result[i].rating.rate,
         }
 
-        const imageDiv =imagePosterDiv(divElement)
-        products.appendChild(imageDiv)
         const productDiv = createProductSection(divElement);
         products.appendChild(productDiv)
       
