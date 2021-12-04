@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/a0e4aef26a.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/header.css"/>
+    <link rel="stylesheet" href="./styles/content.css"/>
     <title>onlineShopping</title>
 </head>
 <body>
@@ -32,11 +33,13 @@
         </nav>
         
     </header>
+<div id="container">
     <button onclick="btnEventHandler()">Get Products</button>
     <button onclick="btnSalesProducts()">Get Sort Products</button>
-    
-    <div id="My products"></div>
+</div>
+    <div id="products"></div>
+    <script src="services.js"></script>
     <script src="index.js"></script>
+    
 </body>
-
 </html>
