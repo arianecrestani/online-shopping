@@ -1,6 +1,6 @@
 "use strict"
 
-const btnEventHandler = () => {
+const loading = () => {
     apiRequest(getProducts())
         .then((json) => updateUi(json));
 };
