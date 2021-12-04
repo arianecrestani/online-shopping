@@ -9,18 +9,19 @@ const btnSalesProducts = () => {
         .then((json) => updateUi(json));
 };
 
+const createImage = (image) => {
+    const imageDiv = document.createElement("div");
+    imageDiv.id = "imageProduct";
+    imageDiv.innerHTML = `<img src="https://fakestoreapi.com/img/${image}"/>`;
+    return imageDiv;
+};
+
 const createTitle = (title) => {
     const titleDiv = document.createElement("div");
     titleDiv.id = "titleProduct";
     titleDiv.innerHTML = title;
   
     return titleDiv;
-};
-const createImage = (image) => {
-    const imageDiv = document.createElement("div");
-    imageDiv.id = "imageProduct";
-    imageDiv.innerHTML = `<img src="https://fakestoreapi.com/img/${image}"/>`;
-    return imageDiv;
 };
 const createDescription = (description) => {
     const descriptionDiv = document.createElement("div");
@@ -44,17 +45,25 @@ const createRating = (rating) => {
     return ratingDiv;
 };
 
+const imagePosterDiv = (result) =>{
+    const imagePoster = document.createElement("div");
+    imagePoster.id = "imageSection";
+
+    const image = createImage(result.image);
+    image.src = result.image;
+    imagePoster.appendChild(image);
+
+    return imagePoster
+}
+
 const createProductSection = (result) => {
+   
     const div = document.createElement("div");
     div.id = "productSection";
   
     const title = createTitle(result.title);
     div.appendChild(title);
-  
-    const image = createImage(result.image);
-    image.src = result.image;
-    div.appendChild(image);
-  
+    
     const description = createDescription(result.description);
     div.appendChild(description);
   
@@ -67,7 +76,7 @@ const createProductSection = (result) => {
     return div;
   };
 
-function updateUi(json) {
+const updateUi = (json) => {
 
     const products = document.getElementById('products')
     products.innerHTML= '';
@@ -83,6 +92,8 @@ function updateUi(json) {
             rating: result[i].rating.rate,
         }
 
+        const imageDiv =imagePosterDiv(divElement)
+        products.appendChild(imageDiv)
         const productDiv = createProductSection(divElement);
         products.appendChild(productDiv)
       
