@@ -4,6 +4,7 @@ const btnEventHandler = () => {
     apiRequest(getProducts())
         .then((json) => updateUi(json));
 };
+
 const btnSalesProducts = () => {
     apiRequest(getSalesProducts())
         .then((json) => updateUi(json));
@@ -12,7 +13,7 @@ const btnSalesProducts = () => {
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
     imageDiv.id = "imageProduct";
-    imageDiv.innerHTML = `<img src="https://fakestoreapi.com/img/${image}"/>`;
+    imageDiv.innerHTML = `<img src="${image}"/>`;
     return imageDiv;
 };
 
@@ -23,6 +24,7 @@ const createTitle = (title) => {
   
     return titleDiv;
 };
+
 const createDescription = (description) => {
     const descriptionDiv = document.createElement("div");
     descriptionDiv.id = "descriptionProduct";
@@ -30,6 +32,7 @@ const createDescription = (description) => {
   
     return descriptionDiv;
 };
+
 const createPrice = (price) => {
     const priceDiv = document.createElement("div");
     priceDiv.id = "priceProduct";
@@ -37,6 +40,7 @@ const createPrice = (price) => {
   
     return priceDiv;
 };
+
 const createRating = (rating) => {
     const ratingDiv = document.createElement("div");
     ratingDiv.id = "ratingProduct";
@@ -45,15 +49,11 @@ const createRating = (rating) => {
     return ratingDiv;
 };
 
-
 const createProductSection = (result) => {
-
-
     const div = document.createElement("div");
     div.id = "productSection";
 
     const image = createImage(result.image);
-    image.src = result.image;
     div.appendChild(image);
   
     const title = createTitle(result.title);
@@ -69,28 +69,26 @@ const createProductSection = (result) => {
     div.appendChild(rating);
   
     return div;
-  };
+};
 
-const updateUi = (json) => {
+const updateUi = (products) => {
 
-    const products = document.getElementById('products')
-    products.innerHTML= '';
+    const productsListDiv = document.getElementById('products')
+    products.innerHTML= ''
 
-    const result = json
-    for (let i= 0; i < result.length; i++){
-        
-      const divElement = {
-            title: result[i].title,
-            image: result[i].image,
-            description: result[i].description,
-            price: result[i].price,
-            rating: result[i].rating.rate,
+    products.forEach(product => {
+        const divElement = {
+            title: product.title,
+            image: product.image,
+            description: product.description,
+            price: product.price,
+            rating: product.rating.rate,
         }
 
         const productDiv = createProductSection(divElement);
         products.appendChild(productDiv)
       
-    }
+    });
 } 
 
 
