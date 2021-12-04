@@ -74,7 +74,7 @@ const createProductSection = (result) => {
 const updateUi = (products) => {
 
     const productsListDiv = document.getElementById('products')
-    products.innerHTML= ''
+    productsListDiv.innerHTML= ''
 
     products.forEach(product => {
         const divElement = {
