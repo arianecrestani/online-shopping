@@ -48,12 +48,9 @@ const createRating = (rating) => {
 
 const createProductSection = (result) => {
 
-   
+
     const div = document.createElement("div");
     div.id = "productSection";
-
-    const divImage = document.createElement('div')
-    divImage.appendChild(div)
 
     const image = createImage(result.image);
     image.src = result.image;
