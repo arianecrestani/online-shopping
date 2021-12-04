@@ -1,4 +1,3 @@
-
 const baseUrl = (endpoint) => {
     const mainUrl= 'https://fakestoreapi.com'
     return `${mainUrl}/${endpoint}`

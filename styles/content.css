@@ -9,25 +9,27 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 #container {
   margin: 4%;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 #products{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  display: flex;
+  margin: 0 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 #productSection{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 30rem;
-    height: auto;
+    width: 350px;
     box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 10%),
       0px 2px 2px 0px rgb(0 0 0 / 10%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
     padding: 1.5rem 2rem;
@@ -35,5 +37,8 @@ body {
     margin-bottom: 32px;
     margin-top: 40px;
     color: blue;
+}
 
+#imageProduct img {
+  width: 100%;
 }

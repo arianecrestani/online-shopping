@@ -12,7 +12,7 @@ const btnSalesProducts = () => {
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
     imageDiv.id = "imageProduct";
-    imageDiv.innerHTML = `<img src="https://fakestoreapi.com/img/${image}"/>`;
+    imageDiv.innerHTML = `<img src="${image}"/>`;
     return imageDiv;
 };
 
@@ -45,17 +45,6 @@ const createRating = (rating) => {
     return ratingDiv;
 };
 
-const imagePosterDiv = (result) =>{
-    const imagePoster = document.createElement("div");
-    imagePoster.id = "imageSection";
-
-    const image = createImage(result.image);
-    image.src = result.image;
-    imagePoster.appendChild(image);
-
-    return imagePoster
-}
-
 const createProductSection = (result) => {
    
     const div = document.createElement("div");
@@ -76,28 +65,25 @@ const createProductSection = (result) => {
     return div;
   };
 
-const updateUi = (json) => {
+const updateUi = (products) => {
 
-    const products = document.getElementById('products')
-    products.innerHTML= '';
+    const productsListDiv = document.getElementById('products')
+    products.innerHTML= ''
 
-    const result = json
-    for (let i= 0; i < result.length; i++){
-        
-      const divElement = {
-            title: result[i].title,
-            image: result[i].image,
-            description: result[i].description,
-            price: result[i].price,
-            rating: result[i].rating.rate,
+    products.forEach(product => {
+        const divElement = {
+            title: product.title,
+            image: product.image,
+            description: product.description,
+            price: product.price,
+            rating: product.rating.rate,
         }
 
-        const imageDiv =imagePosterDiv(divElement)
-        products.appendChild(imageDiv)
-        const productDiv = createProductSection(divElement);
-        products.appendChild(productDiv)
-      
-    }
+        const imageDiv = createImage(divElement.image)
+        const productDiv = createProductSection(divElement)
+        productDiv.appendChild(imageDiv)
+        productsListDiv.appendChild(productDiv)
+    });
 } 
 
 
