@@ -4,6 +4,7 @@ const btnEventHandler = () => {
     apiRequest(getProducts())
         .then((json) => updateUi(json));
 };
+
 const btnSalesProducts = () => {
     apiRequest(getSalesProducts())
         .then((json) => updateUi(json));
@@ -23,6 +24,7 @@ const createTitle = (title) => {
   
     return titleDiv;
 };
+
 const createDescription = (description) => {
     const descriptionDiv = document.createElement("div");
     descriptionDiv.id = "descriptionProduct";
@@ -30,6 +32,7 @@ const createDescription = (description) => {
   
     return descriptionDiv;
 };
+
 const createPrice = (price) => {
     const priceDiv = document.createElement("div");
     priceDiv.id = "priceProduct";
@@ -37,6 +40,7 @@ const createPrice = (price) => {
   
     return priceDiv;
 };
+
 const createRating = (rating) => {
     const ratingDiv = document.createElement("div");
     ratingDiv.id = "ratingProduct";
@@ -48,9 +52,6 @@ const createRating = (rating) => {
 const createProductSection = (result) => {
     const div = document.createElement("div");
     div.id = "productSection";
-
-    const divImage = document.createElement('div')
-    divImage.appendChild(div)
 
     const image = createImage(result.image);
     div.appendChild(image);
@@ -68,7 +69,7 @@ const createProductSection = (result) => {
     div.appendChild(rating);
   
     return div;
-  };
+};
 
 const updateUi = (products) => {
 
