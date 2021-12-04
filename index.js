@@ -59,8 +59,8 @@ const createProductSection = (result) => {
     const title = createTitle(result.title);
     div.appendChild(title);
     
-    const description = createDescription(result.description);
-    div.appendChild(description);
+    // const description = createDescription(result.description);
+    // div.appendChild(description); // description going to another page (productDetail)
   
     const price = createPrice(result.price);
     div.appendChild(price);
@@ -80,7 +80,7 @@ const updateUi = (products) => {
         const divElement = {
             title: product.title,
             image: product.image,
-            description: product.description,
+            // description: product.description,
             price: product.price,
             rating: product.rating.rate,
         }
