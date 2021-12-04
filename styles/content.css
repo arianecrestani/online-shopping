@@ -36,11 +36,16 @@ body {
     padding: 1.5rem 2rem;
     margin-left: 22px;
     margin-bottom: 32px;
-    margin-top: 40px;
+    margin-top: 20px;
     color: black; 
 }
 
 #imageProduct img {
   width: 100%;
+}
+
+#iconHeart{
+    font-size: 1.5rem;
+    padding-left: 16rem;
 }
 

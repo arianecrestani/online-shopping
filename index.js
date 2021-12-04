@@ -49,9 +49,22 @@ const createRating = (rating) => {
     return ratingDiv;
 };
 
+
+
 const createProductSection = (result) => {
+
+
     const div = document.createElement("div");
     div.id = "productSection";
+
+    const icon = document.createElement('span')
+    div.appendChild(icon)
+
+    const iconHeart = document.createElement('a')
+    iconHeart.href = "#"
+    iconHeart.className = 'fas fa-heart'
+    iconHeart.id = 'iconHeart'
+    icon.appendChild(iconHeart)
 
     const image = createImage(result.image);
     div.appendChild(image);
@@ -67,7 +80,7 @@ const createProductSection = (result) => {
   
     const rating = createRating(result.rating);
     div.appendChild(rating);
-  
+
     return div;
 };
 
@@ -75,6 +88,7 @@ const updateUi = (products) => {
 
     const productsListDiv = document.getElementById('products')
     productsListDiv.innerHTML= ''
+
 
     products.forEach(product => {
         const divElement = {
@@ -84,11 +98,13 @@ const updateUi = (products) => {
             price: product.price,
             rating: product.rating.rate,
         }
-
         const productDiv = createProductSection(divElement);
         productsListDiv.appendChild(productDiv) 
+
+     
     });
-} 
+}
+ 
 
 
 
