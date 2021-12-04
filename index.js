@@ -46,9 +46,14 @@ const createRating = (rating) => {
 };
 
 const createProductSection = (result) => {
-   
     const div = document.createElement("div");
     div.id = "productSection";
+
+    const divImage = document.createElement('div')
+    divImage.appendChild(div)
+
+    const image = createImage(result.image);
+    div.appendChild(image);
   
     const title = createTitle(result.title);
     div.appendChild(title);
@@ -79,10 +84,9 @@ const updateUi = (products) => {
             rating: product.rating.rate,
         }
 
-        const imageDiv = createImage(divElement.image)
-        const productDiv = createProductSection(divElement)
-        productDiv.appendChild(imageDiv)
-        productsListDiv.appendChild(productDiv)
+        const productDiv = createProductSection(divElement);
+        products.appendChild(productDiv)
+      
     });
 } 
 
