@@ -86,8 +86,7 @@ const updateUi = (products) => {
         }
 
         const productDiv = createProductSection(divElement);
-        products.appendChild(productDiv)
-      
+        productsListDiv.appendChild(productDiv) 
     });
 } 
 
