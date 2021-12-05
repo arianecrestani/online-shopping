@@ -42,7 +42,9 @@ body {
 }
 
 #imageProduct img {
-  width: 80%;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
 }
 
 #iconHeart{
