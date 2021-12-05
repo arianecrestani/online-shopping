@@ -51,7 +51,7 @@ const createRating = (rating) => {
 
 
 
-const createProductSection = (result) => {
+const createProductSection = (products) => {
 
 
     const div = document.createElement("div");
@@ -66,19 +66,19 @@ const createProductSection = (result) => {
     iconHeart.id = 'iconHeart'
     icon.appendChild(iconHeart)
 
-    const image = createImage(result.image);
+    const image = createImage(products.image);
     div.appendChild(image);
   
-    const title = createTitle(result.title);
+    const title = createTitle(products.title);
     div.appendChild(title);
     
     // const description = createDescription(result.description);
     // div.appendChild(description); // description going to another page (productDetail)
   
-    const price = createPrice(result.price);
+    const price = createPrice(products.price);
     div.appendChild(price);
   
-    const rating = createRating(result.rating);
+    const rating = createRating(products.rating);
     div.appendChild(rating);
 
     return div;
