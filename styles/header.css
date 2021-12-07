@@ -28,10 +28,19 @@ header {
 .nav-links a {
     text-decoration: none;
     font-size: 1.3rem;
+    color: rgb(62, 88, 158);
+    transition: all .3s ease;
+}
+.nav-links a:hover {
+    color: rgb(206, 136, 148);
 }
 .nav-icons .fas{
     font-size: 1.5rem;
-
+    color: rgb(62, 88, 158);
+    transition: all .3s ease;
+}
+.nav-icons .fas:hover {
+    color: rgb(206, 136, 148);
 }
 .nav-icons .fa-shopping-cart {
     margin-right: 10px;
@@ -61,16 +70,20 @@ header {
 .dropdown-content {
     display: none; 
     position: absolute;
+    padding: 10px;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 5px;
 }
 .dropdown-content a {
     font-size: 1rem;
+    margin: 5px;
+    letter-spacing: 2px;
 }
 .dropdown-content a:hover {
-    background-color: #ddd;
+    /* background-color: #ddd; */
 }
 .dropdown:hover .dropdown-content {
     display: block;

@@ -62,7 +62,7 @@ const createProductSection = (products) => {
 
     const iconHeart = document.createElement('a')
     iconHeart.href = "#"
-    iconHeart.className = 'fas fa-heart'
+    iconHeart.className = 'far fa-heart'
     iconHeart.id = 'iconHeart'
     icon.appendChild(iconHeart)
 
