@@ -10,5 +10,5 @@ const singleProduct = () => {
 
 const updateUi = (product) => {
 
-    
+    jjj
 }
