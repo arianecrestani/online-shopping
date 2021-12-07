@@ -82,9 +82,9 @@ header {
     margin: 5px;
     letter-spacing: 2px;
 }
-.dropdown-content a:hover {
-    /* background-color: #ddd; */
-}
+/* .dropdown-content a:hover {
+    background-color: #ddd;
+} */
 .dropdown:hover .dropdown-content {
     display: block;
     display: flex;

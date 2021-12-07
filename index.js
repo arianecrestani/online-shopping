@@ -10,6 +10,11 @@ const btnSalesProducts = () => {
         .then((json) => updateUi(json));
 };
 
+const btnEletroProducts = () => {
+    apiRequest(getEletroProducts())
+        .then((json) => updateUi(json));
+}
+
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
     imageDiv.id = "imageProduct";
