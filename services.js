@@ -11,6 +11,6 @@ const apiRequest = async (endpoint) => {
  const getProducts = () => `products?limit=10`;
  const getSalesProducts = () => `products?sort=desc`;
  const getEletroProducts = () => `products/category/electronics`;
-const getSingleProduct = () => `products/1`;
+const getSingleProduct = (item) => `products/${item}`;
 
 
