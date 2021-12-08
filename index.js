@@ -12,6 +12,22 @@ const btnEletroProducts = () => {
     apiRequest(getEletroProducts())
         .then((json) => updateUi(json));
 }
+
+const btnJewerelyProducts = () => {
+    apiRequest(getJewerelyProducts())
+        .then((json) => updateUi(json));
+}
+
+const btnMensProducts = () => {
+    apiRequest(getMensProducts())
+        .then((json) => updateUi(json));
+}
+
+const btnWomenProducts = () => {
+    apiRequest(getWomenProducts())
+        .then((json) => updateUi(json));
+}
+
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
     imageDiv.id = "imageProduct";
