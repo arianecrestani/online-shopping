@@ -80,7 +80,7 @@ const createProductSection = (product) => {
 
     const btnDetails = document.createElement('a')
     btnDetails.innerText = "Product Details"
-    btnDetails.href = `./productDetail.html?productId=${product.id}`
+    btnDetails.href = `./productDetailPage.html?productId=${product.id}`
     btnDetails.className = 'seeDetailBtn'
     span.appendChild(btnDetails)
 
