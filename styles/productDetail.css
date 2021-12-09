@@ -10,31 +10,31 @@
     height: 400px;
 }
 
-.imgContainer img {
+#imgContainer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.detailsContainer {
+#detailsContainer {
     padding: 1rem;
 }
 
-.detailsContainer #itemTitle {
+#detailsContainer #itemTitle {
     font-size: 2rem;
 }
 
-.detailsContainer .itemDescription {
+#detailsContainer #itemDescription {
     font-size: 1rem;
     color: gray;
     margin: 1rem 0rem;
 }
 
-.detailsContainer .itemPrice {
+#etailsContainer #itemPrice {
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
-.detailsContainer .itemRate {
+#detailsContainer #itemRate {
     color: rgb(124, 116, 46);
 }
