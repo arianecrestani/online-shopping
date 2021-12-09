@@ -65,7 +65,7 @@ const singleProduct = () => {
 };
 
 
-const createProductSection = (products) => {
+const createProductSection = (product) => {
 
 
     const div = document.createElement("div");
@@ -115,7 +115,7 @@ const updateUi = (products) => {
         const divElement = {
             title: product.title,
             image: product.image,
-            // description: product.description,
+            description: product.description,
             price: product.price,
             rating: product.rating.rate,
         }
