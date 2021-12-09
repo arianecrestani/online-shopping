@@ -127,20 +127,5 @@ const updateUi = (products) => {
     });
 }
 
-// function upadateUi(products) 
-//             const productsListDiv = document.getElementById('products')
-//             productsListDiv.innerHTML = ''
 
-//             products.forEach(product => {
-//             const divElement = {
-//                 id: product.id,
-//                 title: product.title,
-//                 image: product.image,
-//                 // description: product.description,
-//                 price: product.price,
-//                 rating: product.rating.rate,
-//             }
-//             const productDiv = createProductSection(divElement);
-//             productsListDiv.appendChild(productDiv)
-// });
 
