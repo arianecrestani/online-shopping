@@ -11,17 +11,7 @@
     <title>onlineShopping | Details</title>
 </head>
 
-<body>
-
-<!-- <div class="row mt-5">
-    <section class="sproduct" container my-5 pt-5>
-        <div class="row mt-5">
-    <header>
-        <nav class="nav-bar">
-            <h1 class="logo">online-shopping</h1>
-         <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-            </ul> -->
+<body onload ='singleProduct()'>
             
             <div class="nav-icons">
                 <a href="./index.html"><i class="fas fa-home"></i></a>
@@ -29,12 +19,10 @@
                 <a href="#"><i class="fas fa-heart"></i></a>
             </div>
         </nav>
-    </header>
-
-    <main class="sproduct">
-        <div onclick='singleProduct()'>
-            <div id='productDetail'></div>
-        </div>
+    </header> 
+    <div id='productItem'>
+        <div id="itemTitle"></div>
+    </div> 
 
         <!-- <div class="row mt-5">
             <div class="col-lg-5 col-md-12 col-12">
@@ -63,12 +51,8 @@
                 <button class="buy-btn"> Add to bag</button>
 
             </div>
-
 </div> -->
-    </main>
-    <script src="index.js"></script>
     <script src="services.js"></script>
-    <script src="index.js"></script>
     <script src="productDetail.js"></script>
 </body>
 

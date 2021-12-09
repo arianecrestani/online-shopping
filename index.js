@@ -29,6 +29,8 @@ const btnWomenProducts = () => {
         .then((json) => updateUi(json));
 }
 
+
+
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
     imageDiv.id = "imageProduct";

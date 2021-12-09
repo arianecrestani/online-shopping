@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="./styles/content.css"/>
     <title>onlineShopping</title>
 </head>
-<body onload="loading()"></body>
+<body onload="loading()">
     <header>
         <nav class="nav-bar">
             <h1 class="logo">online-shopping</h1>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-            
                 <li class="dropdown">
                     <a class="dropbtn" href="#">Products</a>
                     <div class="dropdown-content">
@@ -29,9 +28,7 @@
                         <a onclick="btnSalesProducts()" href="#">Sales</a>
                     </div>
                 </li>
-
             </ul>
-
             <div class="search-container">
                 <i class="fas fa-search"></i>
                 <input id="search-input" type="text" placeholder="Search product...">
@@ -44,7 +41,6 @@
         </nav>
         
     </header>
-
     <div id="container"></div>
     <div id="products">
         
@@ -54,8 +50,6 @@
         <a href="#" class="next">Next &raquo;</a>
     </div>
     <script src="services.js"></script>
-    <script src="index.js"></script>
-    
-    
+    <script src="index.js"></script>  
 </body>
 </html>
