@@ -18,8 +18,6 @@ const btnEletroProducts = () => {
         .then((json) => updateUi(json));
 }
 
-
-
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
     imageDiv.id = "imageProduct";
@@ -59,11 +57,6 @@ const createRating = (rating) => {
     return ratingDiv;
 };
 
-const singleProduct = () => {
-    apiRequest(getSingleProduct())
-        .then((json) => updateUi(json));
-};
-
 
 const createProductSection = (product) => {
 
@@ -87,19 +80,19 @@ const createProductSection = (product) => {
     div.appendChild(btnDetails)
 
     
-    const image = createImage(products.image);
+    const image = createImage(product.image);
     div.appendChild(image);
 
-    const title = createTitle(products.title);
+    const title = createTitle(product.title);
     div.appendChild(title);
 
     // const description = createDescription(result.description);
     // div.appendChild(description); // description going to another page (productDetail)
 
-    const price = createPrice(products.price);
+    const price = createPrice(product.price);
     div.appendChild(price);
 
-    const rating = createRating(products.rating);
+    const rating = createRating(product.rating);
     div.appendChild(rating);
 
     return div;
