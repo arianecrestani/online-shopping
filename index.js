@@ -1,3 +1,4 @@
+
 const loading = () => {
     apiRequest(getProducts())
         .then((json) => updateUi(json));
@@ -12,6 +13,7 @@ const btnEletroProducts = () => {
     apiRequest(getEletroProducts())
         .then((json) => updateUi(json));
 }
+
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
     imageDiv.id = "imageProduct";
@@ -98,9 +100,9 @@ const updateUi = (products) => {
     const productsListDiv = document.getElementById('products')
     productsListDiv.innerHTML = ''
 
-
     products.forEach(product => {
         const divElement = {
+            id: product.id,
             title: product.title,
             image: product.image,
             // description: product.description,
@@ -109,11 +111,5 @@ const updateUi = (products) => {
         }
         const productDiv = createProductSection(divElement);
         productsListDiv.appendChild(productDiv)
-
-
     });
 }
-
-
-
-
