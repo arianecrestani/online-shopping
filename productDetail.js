@@ -12,8 +12,8 @@ const updateUiItem = (product) => {
     itemTitle.innerHTML = product.title ? product.title : '';
 
     const itemImage = document.getElementById('itemImage')
-    itemImage.innerHTML = product.image ? product.image : '';
-    // imageDiv.innerHTML = `<img src="${image}"/>`;
+    itemImage.innerHTML = `<img src="${product.image}"/>`;
+   
 
     const itemPrice = document.getElementById('itemPrice')
     itemPrice.innerHTML = product.price ? product.price : '';
