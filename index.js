@@ -14,6 +14,21 @@ const btnEletroProducts = () => {
         .then((json) => updateUi(json));
 }
 
+const btnJewerelyProducts = () => {
+    apiRequest(getJewerelyProducts())
+        .then((json) => updateUi(json));
+}
+
+const btnMensProducts = () => {
+    apiRequest(getMensProducts())
+        .then((json) => updateUi(json));
+}
+
+const btnWomenProducts = () => {
+    apiRequest(getWomenProducts())
+        .then((json) => updateUi(json));
+}
+
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
     imageDiv.id = "imageProduct";
@@ -61,22 +76,21 @@ const createProductSection = (product) => {
     const div = document.createElement("div");
     div.id = "productSection";
 
-    const icon = document.createElement('span')
-    div.appendChild(icon)
+    const span = document.createElement('span')
+    div.appendChild(span)
+
+    const btnDetails = document.createElement('a')
+    btnDetails.innerText = "Product Details"
+    btnDetails.href = `./productDetailPage.html?productId=${product.id}`
+    btnDetails.className = 'seeDetailBtn'
+    span.appendChild(btnDetails)
 
     const iconHeart = document.createElement('a')
     iconHeart.href = "#"
     iconHeart.className = 'far fa-heart'
     iconHeart.id = 'iconHeart'
-    icon.appendChild(iconHeart)
-    
-    const btnDetails = document.createElement('a')
-    btnDetails.innerText = "Product Details"
-    btnDetails.href = `./productDetailPage.html?productId=${product.id}`
-    btnDetails.className = 'seeDetail'
-    div.appendChild(btnDetails)
-
-    
+    span.appendChild(iconHeart)
+       
     const image = createImage(product.image);
     div.appendChild(image);
 

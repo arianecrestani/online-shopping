@@ -42,7 +42,7 @@ header {
 .nav-icons .fas:hover {
     color: rgb(206, 136, 148);
 }
-.nav-icons .fa-shopping-cart {
+.nav-icons .fa-shopping-cart, .fa-home {
     margin-right: 10px;
 }
 
