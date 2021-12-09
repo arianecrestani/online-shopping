@@ -1,8 +1,11 @@
 "use strict"
 
+/* Function called by event */
+//const singleProduct = async () => { const json = await apiRequest(...); updateUiItem(json); }
+
 const loading = () => {
-    apiRequest(getProducts())
-        .then((json) => updateUi(json));
+    apiRequest(getProducts())// function called by endpoint
+        .then((json) => updateUi(json));//return updateUi in json
 };
 
 const btnSalesProducts = () => {
@@ -44,8 +47,8 @@ const createPrice = (price) => {
     const priceDiv = document.createElement("div");
     priceDiv.id = "priceProduct";
     priceDiv.innerHTML = price;
-
     return priceDiv;
+
 };
 
 const createRating = (rating) => {
@@ -104,7 +107,7 @@ const createProductSection = (products) => {
 
 const updateUi = (products) => {
 
-    const productsListDiv = document.getElementById('products')
+    const productsListDiv = document.getElementById('products')//there are a div in html
     productsListDiv.innerHTML = ''
 
 
@@ -122,7 +125,6 @@ const updateUi = (products) => {
 
     });
 }
-
 
 
 

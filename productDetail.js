@@ -6,7 +6,6 @@ const singleProduct = () => {
     apiRequest(getSingleProduct(productId)).then((json) => updateUiItem(json));
 };
 
-
 const updateUiItem = (product) => {
 
     const itemTitle = document.getElementById('itemTitle')
