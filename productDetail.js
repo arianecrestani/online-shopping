@@ -28,13 +28,4 @@ const updateUiItem = (product) => {
     
 }
 
-/* const createImage = (image) => {
-    const imageDiv = document.createElement("div");
-    imageDiv.id = "imageProduct";
-    imageDiv.innerHTML = `<img src="${image}"/>`;
-    return imageDiv;
-};
-*/
-
-//localStorage.setItem("")
 
