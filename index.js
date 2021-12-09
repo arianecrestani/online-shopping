@@ -15,10 +15,7 @@ const btnEletroProducts = () => {
         .then((json) => updateUi(json));
 }
 
-const singleProduct = () => {
-    apiRequest(getSingleProduct())
-        .then((json) => updateUi(json));
-};
+
 
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
@@ -59,6 +56,10 @@ const createRating = (rating) => {
     return ratingDiv;
 };
 
+const singleProduct = () => {
+    apiRequest(getSingleProduct())
+        .then((json) => updateUi(json));
+};
 
 
 const createProductSection = (products) => {
