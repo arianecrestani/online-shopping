@@ -1,7 +1,10 @@
 
+/* Function called by event */
+//const singleProduct = async () => { const json = await apiRequest(...); updateUiItem(json); }
+
 const loading = () => {
-    apiRequest(getProducts())
-        .then((json) => updateUi(json));
+    apiRequest(getProducts())// function called by endpoint
+        .then((json) => updateUi(json));//return updateUi in json
 };
 
 const btnSalesProducts = () => {
@@ -28,9 +31,7 @@ const btnWomenProducts = () => {
     apiRequest(getWomenProducts())
         .then((json) => updateUi(json));
 }
-
-
-
+// created arrow function and put each div hear insted html being dynamicaly
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
     imageDiv.id = "imageProduct";
@@ -58,8 +59,8 @@ const createPrice = (price) => {
     const priceDiv = document.createElement("div");
     priceDiv.id = "priceProduct";
     priceDiv.innerHTML = price;
-
     return priceDiv;
+
 };
 
 const createRating = (rating) => {
@@ -69,12 +70,8 @@ const createRating = (rating) => {
 
     return ratingDiv;
 };
-
-
-
+//created arrow function and put divs inside called objects inside each tag 
 const createProductSection = (product) => {
-
-
     const div = document.createElement("div");
     div.id = "productSection";
 
@@ -83,7 +80,7 @@ const createProductSection = (product) => {
 
     const btnDetails = document.createElement('a')
     btnDetails.innerText = "Product Details"
-    btnDetails.href = `./productDetailPage.html?productId=${product.id}`
+    btnDetails.href = `./productDetail.html?productId=${product.id}`
     btnDetails.className = 'seeDetailBtn'
     span.appendChild(btnDetails)
 
@@ -93,7 +90,7 @@ const createProductSection = (product) => {
     iconHeart.id = 'iconHeart'
     span.appendChild(iconHeart)
        
-    const image = createImage(product.image);
+    const image = createImage(product.image);// called a function and pass a objeto 
     div.appendChild(image);
 
     const title = createTitle(product.title);
@@ -113,7 +110,7 @@ const createProductSection = (product) => {
 
 const updateUi = (products) => {
 
-    const productsListDiv = document.getElementById('products')
+    const productsListDiv = document.getElementById('products')//there are a div in html
     productsListDiv.innerHTML = ''
 
     products.forEach(product => {
@@ -129,3 +126,21 @@ const updateUi = (products) => {
         productsListDiv.appendChild(productDiv)
     });
 }
+
+// function upadateUi(products) 
+//             const productsListDiv = document.getElementById('products')
+//             productsListDiv.innerHTML = ''
+
+//             products.forEach(product => {
+//             const divElement = {
+//                 id: product.id,
+//                 title: product.title,
+//                 image: product.image,
+//                 // description: product.description,
+//                 price: product.price,
+//                 rating: product.rating.rate,
+//             }
+//             const productDiv = createProductSection(divElement);
+//             productsListDiv.appendChild(productDiv)
+// });
+
