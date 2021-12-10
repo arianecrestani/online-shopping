@@ -88,6 +88,8 @@ const createProductSection = (product) => {
     iconHeart.href = "#"
     iconHeart.className = 'far fa-heart'
     iconHeart.id = 'iconHeart'
+    iconHeart.product = product
+    iconHeart.addEventListener("click", addFavoriteItem) //save to favorite
     span.appendChild(iconHeart)
 
     const iconCart = document.createElement('a')
@@ -142,4 +144,24 @@ const updateUi = (products) => {
         const productDiv = createProductSection(divElement);
         productsListDiv.appendChild(productDiv)
     });
+}
+
+//LocalStorage to save Favorite products
+let favouriteList = [];
+let storage = window.localStorage.getItem("favouriteList");
+
+if(storage === null) {
+    favouriteList = [];
+}else {
+    favouriteList = JSON.parse(storage);
+}
+function addFavoriteItem(event) {
+    
+    if(event.target.className === 'far fa-heart') {
+        favouriteList.push(event.target.product)
+        event.target.className = "fas fa-heart"
+    }else {
+        event.target.className = 'far fa-heart'
+    }
+    localStorage.setItem("favouriteList", JSON.stringify(favouriteList));
 }
