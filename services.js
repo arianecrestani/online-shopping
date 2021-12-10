@@ -5,8 +5,8 @@ const baseUrl = (endpoint) => {
 }
 const apiRequest = async (endpoint) => {
     return await fetch(baseUrl(endpoint)) // > const response = await fetch('https://fakestoreapi.com' + products?limit=10)
-    .then((response) => response.json())  // const products = await response.json
-    .catch((error) => console.log(error));
+        .then((response) => response.json())  // const products = await response.json
+        .catch((error) => console.log(error));
 };
  
 const getProducts = () => `products?limit=10`;

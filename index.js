@@ -33,13 +33,13 @@ const createTitle = (title) => {
     return titleDiv;
 };
 
-const createDescription = (description) => {
-    const descriptionDiv = document.createElement("div");
-    descriptionDiv.id = "descriptionProduct";
-    descriptionDiv.innerHTML = description;
+// const createDescription = (description) => {
+//     const descriptionDiv = document.createElement("div");
+//     descriptionDiv.id = "descriptionProduct";
+//     descriptionDiv.innerHTML = description;
 
-    return descriptionDiv;
-};
+//     return descriptionDiv;
+// };
 
 const createPrice = (price) => {
     const priceDiv = document.createElement("div");
@@ -60,7 +60,6 @@ const createRating = (rating) => {
 
 const createProductSection = (product) => {
 
-
     const div = document.createElement("div");
     div.id = "productSection";
 
@@ -75,7 +74,7 @@ const createProductSection = (product) => {
     
     const btnDetails = document.createElement('a')
     btnDetails.innerText = "Product Details"
-    btnDetails.href = `./productDetailPage.html?productId=${product.id}`
+    btnDetails.href = `./productDetail.html?productId=${product.id}`
     btnDetails.className = 'seeDetail'
     div.appendChild(btnDetails)
 
@@ -103,21 +102,15 @@ const updateUi = (products) => {
     const productsListDiv = document.getElementById('products')//there are a div in html
     productsListDiv.innerHTML = ''
 
-
     products.forEach(product => {
         const divElement = {
             title: product.title,
             image: product.image,
-            description: product.description,
+            // description: product.description,
             price: product.price,
             rating: product.rating.rate,
         }
         const productDiv = createProductSection(divElement);
         productsListDiv.appendChild(productDiv)
-
-
     });
 }
-
-
-

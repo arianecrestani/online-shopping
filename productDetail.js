@@ -12,19 +12,17 @@ const updateUiItem = (product) => {
     itemTitle.innerHTML = product.title ? product.title : '';
 
     
-    const itemDescription = document.getElementById('itemDescription')
-    itemDescription.innerHTML = product.description ? product.description : '';
+    // const itemDescription = document.getElementById('itemDescription')
+    // itemDescription.innerHTML = product.description ? product.description : '';
 
-    const itemImage = document.getElementById('itemImage')
-    itemImage.innerHTML = `<img src="${product.image}.jpg"/>`;
+    // const itemImage = document.getElementById('itemImage')
+    // itemImage.innerHTML = `<img src="${product.image}.jpg"/>`;
    
-    
+    // const itemPrice = document.getElementById('itemPrice')
+    // itemPrice.innerHTML = product.price ? product.price : '';
 
-    const itemPrice = document.getElementById('itemPrice')
-    itemPrice.innerHTML = product.price ? product.price : '';
-
-    const itemRate = document.getElementById('itemRate')
-    itemRate.innerHTML = product.rating.rate ? product.rating.rate : '';
+    // const itemRate = document.getElementById('itemRate')
+    // itemRate.innerHTML = product.rating.rate ? product.rating.rate : '';
     
 }
 
