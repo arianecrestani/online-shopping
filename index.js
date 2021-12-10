@@ -119,6 +119,7 @@ const updateUi = (products) => {
 
     products.forEach(product => {
         const divElement = {
+            id: product.id,
             title: product.title,
             image: product.image,
             // description: product.description,
