@@ -90,3 +90,13 @@ header {
     display: flex;
     flex-direction: column; 
 }
+
+footer {
+    background-color: #b0e0e6;
+    display: block;
+}
+
+address{
+    display: block;
+    font-style: italic;
+}
