@@ -7,15 +7,29 @@ const loading = () => {
         .then((json) => updateUi(json));//return updateUi in json
 };
 
+const btnEletroProducts = () => {
+      apiRequest(getEletroProducts())
+     .then((json) => updateUi(json));
+}
+const btnJewerelyProducts = () => {
+    apiRequest(getJewerelyProducts())
+    .then((json) => updateUi(json));
+}
+
+const btnMensProducts = () => {
+    apiRequest(getMensProducts())
+    .then((json) => updateUi(json));
+}
+
+const btnWomenProducts = () => {
+    apiRequest(getWomenProducts())
+    .then((json) => updateUi(json));
+};
+
 const btnSalesProducts = () => {
     apiRequest(getSalesProducts())
         .then((json) => updateUi(json));
 };
-
-const btnEletroProducts = () => {
-    apiRequest(getEletroProducts())
-        .then((json) => updateUi(json));
-}
 
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
@@ -31,7 +45,6 @@ const createTitle = (title) => {
 
     return titleDiv;
 };
-
 // const createDescription = (description) => {
 //     const descriptionDiv = document.createElement("div");
 //     descriptionDiv.id = "descriptionProduct";
