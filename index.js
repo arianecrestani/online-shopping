@@ -106,7 +106,7 @@ const updateUi = (products) => {
             title: product.title,
             image: product.image,
             // description: product.description,
-            price: product.price,
+            price: "$" + product.price,
             rating: product.rating.rate,
         }
         const productDiv = createProductSection(divElement);
