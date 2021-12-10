@@ -17,13 +17,13 @@ const updateUiItem = (product) => {
     
     
     const itemImage = document.getElementById('itemImage')
-    itemImage.innerHTML = `<img src="${product.image}.jpg"/>`;
+    itemImage.innerHTML = `<img src="${product.image}"/>`;
 
     const itemPrice = document.getElementById('itemPrice')
-    itemPrice.innerHTML = product.price ? product.price : '';
+    itemPrice.innerHTML = product.price ? product.price + " $" : '';
 
     const itemRate = document.getElementById('itemRate')
-    itemRate.innerHTML = product.rating ? product.rating : '';
+    itemRate.innerHTML = product.rating.rate ? product.rating.rate + " *" : '';
 
 }
 
