@@ -16,14 +16,12 @@ body {
   flex-direction: row;
   justify-content: center;
 }
-
 #products{
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 #productSection{
   display: flex;
   flex-direction: column;
@@ -46,21 +44,19 @@ body {
   align-items: center;
   margin-bottom: 1rem;
 }
-
 #imageProduct img {
   width: 300px;
   height: 300px;
   object-fit: contain;
 }
-#iconCart{
+#iconCart {
   font-size: 1.5rem;
   padding-left: 0.5rem;
   text-decoration: none;
   color: rgb(62, 88, 158);
   transition: all .3s ease;
-
 }
-#iconHeart{
+#iconHeart {
   font-size: 1.5rem;
   text-decoration: none;
   color: rgb(62, 88, 158);
@@ -69,12 +65,9 @@ body {
 #iconCart:hover{
   color: rgb(206, 136, 148);
 }
-
-
 #iconHeart:hover {
   color: rgb(206, 136, 148);
 }
-
 .seeDetailBtn {
   text-decoration: none;
   font-size: 1rem;
@@ -93,20 +86,25 @@ body {
 
 #titleProduct {
   margin: 5px 0;
+  padding: 0.8rem;
+  font-family: HelveticaNow,Helvetica,sans-serif;
 }
 #priceProduct {
   margin-bottom: 5px;
   font-size: 1.1rem;
-}
-#ratingProduct {
-  color: rgb(124, 116, 46);
-}
 
+}
+#iconStar{
+  color: rgb(62, 88, 158);
+  display: flex;
+  text-decoration: none;
+  padding: 2px;
+
+}
 .previous {
   background-color: #f1f1f1;
   color: black;
 }
-
 .next {
   background-color: powderblue;
   color: white;

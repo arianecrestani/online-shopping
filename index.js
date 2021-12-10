@@ -1,5 +1,4 @@
 "use strict"
-
 /* Function called by event */
 //const singleProduct = async () => { const json = await apiRequest(...); updateUiItem(json); }
 
@@ -96,8 +95,19 @@ const createProductSection = (product) => {
     const price = createPrice(product.price);
     div.appendChild(price);
 
+    const divRating = document.createElement('div') 
+    divRating.id = 'iconStar'
+    div.appendChild(divRating)
+
     const rating = createRating(product.rating);
-    div.appendChild(rating);
+    rating.id='iconStar'
+    divRating.appendChild(rating);
+
+    const iconStar = document.createElement('a')
+    iconStar.href = "#"
+    iconStar.id = 'iconStar'
+    iconStar.className = 'fas fa-star'
+    divRating.appendChild(iconStar)
 
     return div;
 };
