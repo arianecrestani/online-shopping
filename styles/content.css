@@ -80,6 +80,17 @@ body {
   color: rgb(206, 136, 148);
 }
 
+#titleProduct {
+  margin: 5px 0;
+}
+#priceProduct {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+#ratingProduct {
+  color: rgb(124, 116, 46);
+}
+
 .previous {
   background-color: #f1f1f1;
   color: black;
