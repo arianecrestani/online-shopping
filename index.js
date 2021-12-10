@@ -77,6 +77,12 @@ const createProductSection = (product) => {
     iconHeart.className = 'far fa-heart'
     iconHeart.id = 'iconHeart'
     span.appendChild(iconHeart)
+
+    const iconCart = document.createElement('a')
+    iconCart.href = "#"
+    iconCart.className = 'fas fa-cart-plus'
+    iconCart.id = 'iconCart'
+    span.appendChild(iconCart)
     
     const image = createImage(product.image);
     div.appendChild(image);
