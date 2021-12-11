@@ -2,7 +2,17 @@
 /* Function called by event */
 //const singleProduct = async () => { const json = await apiRequest(...); updateUiItem(json); }
 
+let favoriteList = []; //part of favorites
 const loading = () => {
+    //LocalStorage to save Favorite products
+    let storage = window.localStorage.getItem("favouriteList");
+
+    if(storage === null) {
+        favoriteList = [];
+    }else {
+        favoriteList = JSON.parse(storage);
+    }
+
     apiRequest(getProducts())// function called by endpoint
         .then((json) => updateUi(json));//return updateUi in json
 };
@@ -86,7 +96,8 @@ const createProductSection = (product) => {
 
     const iconHeart = document.createElement('a')
     iconHeart.href = "#"
-    iconHeart.className = 'far fa-heart'
+    const isFavorite = getFavoriteIndex(product) >= 0 //part of favorite
+    iconHeart.className = isFavorite ? 'fas fa-heart' : 'far fa-heart' //part of favorite
     iconHeart.id = 'iconHeart'
     iconHeart.product = product
     iconHeart.addEventListener("click", addFavoriteItem) //save to favorite
@@ -139,7 +150,7 @@ const updateUi = (products) => {
             image: product.image,
             // description: product.description,
             price: "$" + product.price,
-            rating: product.rating.rate,
+            rating: product.rating.rate ? product.rating.rate : product.rating
         }
         const productDiv = createProductSection(divElement);
         productsListDiv.appendChild(productDiv)
@@ -147,21 +158,27 @@ const updateUi = (products) => {
 }
 
 //LocalStorage to save Favorite products
-let favouriteList = [];
-let storage = window.localStorage.getItem("favouriteList");
-
-if(storage === null) {
-    favouriteList = [];
-}else {
-    favouriteList = JSON.parse(storage);
+const getFavoriteIndex = (product) => {
+    for (let i = 0; i < favoriteList.length; i++) {
+        const favorite = favoriteList[i];
+        if (favorite.id === product.id) {
+            return i;
+        }
+    }
 }
-function addFavoriteItem(event) {
-    
+
+const addFavoriteItem = (event) => {
     if(event.target.className === 'far fa-heart') {
-        favouriteList.push(event.target.product)
+        favoriteList.push(event.target.product)
         event.target.className = "fas fa-heart"
     }else {
+        const indexOf = getFavoriteIndex(event.target.product)
+        favoriteList.splice(indexOf, 1);
         event.target.className = 'far fa-heart'
     }
-    localStorage.setItem("favouriteList", JSON.stringify(favouriteList));
+    localStorage.setItem("favouriteList", JSON.stringify(favoriteList));
+}
+
+const btnFavoriteList = () => {
+    updateUi(favoriteList)
 }
