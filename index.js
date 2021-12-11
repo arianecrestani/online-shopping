@@ -2,24 +2,30 @@
 /* Function called by event */
 //const singleProduct = async () => { const json = await apiRequest(...); updateUiItem(json); }
 
+
 let favoriteList = []; //part of favorites
+
+const loadFavoriteItens = () => {
+
+  //get itens and insert in the favoriteList
+  let storage = window.localStorage.getItem("favouriteList");// 
+
+  if(storage === null) {
+      favoriteList = [];
+  } else {
+      favoriteList = JSON.parse(storage);
+  }  
+}
+
 const loading = () => {
-    //LocalStorage to save Favorite products
-    let storage = window.localStorage.getItem("favouriteList");
-
-    if(storage === null) {
-        favoriteList = [];
-    }else {
-        favoriteList = JSON.parse(storage);
-    }
-
+    loadFavoriteItens()
     apiRequest(getProducts())// function called by endpoint
-        .then((json) => updateUi(json));//return updateUi in json
+    .then((json) => updateUi(json));//return updateUi in json
 };
 
 const btnEletroProducts = () => {
-      apiRequest(getEletroProducts())
-     .then((json) => updateUi(json));
+    apiRequest(getEletroProducts())
+    .then((json) => updateUi(json));
 }
 const btnJewerelyProducts = () => {
     apiRequest(getJewerelyProducts())
@@ -38,7 +44,7 @@ const btnWomenProducts = () => {
 
 const btnSalesProducts = () => {
     apiRequest(getSalesProducts())
-        .then((json) => updateUi(json));
+    .then((json) => updateUi(json));
 };
 
 const createImage = (image) => {
