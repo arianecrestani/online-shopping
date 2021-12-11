@@ -20,25 +20,11 @@ const updateUiItem = (product) => {
     itemImage.innerHTML = `<img src="${product.image}"/>`;
 
     const itemPrice = document.getElementById('itemPrice')
-    itemPrice.innerHTML = product.price ? product.price + " $" : '';
+    itemPrice.innerHTML = product.price ? "$" + product.price : '';
 
     const itemRate = document.getElementById('itemRate')
-    itemRate.innerHTML = product.rating.rate ? product.rating.rate + " *" : '';
+    itemRate.innerHTML = product.rating.rate ? product.rating.rate : '';
 
-    
-    // const div = document.createElement("div");
-    // div.id = "productDetails";
-
-    // const span = document.createElement('span')
-    // div.appendChild(span)
-
-    const iconCart = document.createElement('a')
-    iconCart.href = "#"
-    iconCart.className = 'fas fa-shopping-cart'
-    iconCart.id = 'iconCart'
-    span.appendChild(iconCart)
-
-    return div;
 }
 
 
