@@ -23,12 +23,12 @@ const loading = () => {
     .then((json) => updateUi(json));//return updateUi in json
 };
 
-const btnEletroProducts = () => {
-    apiRequest(getEletroProducts())
+const btnElectroProducts = () => {
+    apiRequest(getElectroProducts())
     .then((json) => updateUi(json));
 }
-const btnJewerelyProducts = () => {
-    apiRequest(getJewerelyProducts())
+const btnJeweleryProducts = () => {
+    apiRequest(getJeweleryProducts())
     .then((json) => updateUi(json));
 }
 
