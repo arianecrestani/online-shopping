@@ -9,35 +9,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/productDetail.css">
-    <title>onlineShopping | Details</title>
+    <title>Product details</title>
 </head>
 
-<body onload ='singleProduct()'>
+<body onload='singleProduct()'>
     <header>
         <nav class="nav-bar">
             <h1 class="logo">online-shopping</h1>
-                 
+
             <div class="nav-icons">
                 <a href="./index.html"><i class="fas fa-home"></i></a>
             </div>
         </nav>
-    </header> 
+    </header>
 
-<div id='productItem'>
-    <section id="imgContainer">
-         <p id="itemImage"></p>
-    </section>
-    <section id="detailsContainer">
-        <h2 id="itemTitle"></h2>
-        <p id="itemDescription"></p>
-        <p id="itemPrice"></p>
-        <span id="itemRate"></span>
-        <i class="fas fa-star"></i>
+    <div id='productItem'>
+        <section id="imgContainer">
+            <p id="itemImage"></p>
+        </section>
+        <section id="detailsContainer">
+            <h2 id="itemTitle"></h2>
+            <p id="itemDescription"></p>
+            <p id="itemPrice"></p>
+            <span id="itemRate"></span>
+            <i class="fas fa-star"></i>
 
-        <a href="#"><i class="fas fa-cart-plus"></i></a>
-        
-    </section>
-</div> 
+            <a href="#"><i class="fas fa-cart-plus"></i></a>
+
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="footer-heading footer-1">
+                    <h2>About Us</h2>
+                    <a href="#">Blog</a>
+                    <a href="#">Demo</a>
+                    <a href="#">Customers</a>
+                    <a href="#">Investores</a>
+                    <a href="#">Terms of services</a>
+                </div>
+                <div class="footer-heading footer-2">
+                    <h2>Contact Us</h2>
+                    <a href="#">Jobs</a>
+                    <a href="#">Support</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Sponsorships</a>
+                </div>
+                <div class="footer-heading footer-3">
+                    <h2>Social Media</h2>
+                    <a href="#">Instagram</a>
+                    <a href="#">Youtube</a>
+                    <a href="#">Twitter</a>
+                </div>
+                <div class="footer-email-form">
+                    <h2>Join our news products </h2>
+                    <input type="email" placeholder="Enter your email address" id="footer-email">
+                    <input type="submit" value="Sign Up" id="footer-email-btn">
+
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
     <script src="services.js"></script>
     <script src="productDetail.js"></script>
 </body>
