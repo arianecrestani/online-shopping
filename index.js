@@ -110,7 +110,7 @@ const createProductSection = (product) => {
     span.appendChild(iconHeart)
 
     const iconCart = document.createElement('a')
-    iconCart.className = 'fas fa-cart-plus'
+    iconCart.className='fas fa-cart-plus';
     iconCart.product = product
     iconCart.id = 'iconCart'
     iconCart.addEventListener("click", addToCar)
@@ -202,10 +202,8 @@ const addToCar = (event) => {
     if(event.target.className === 'fas fa-cart-plus') {
         addItensCar.push(event.target.product)
         event.target.className = "fas fa-cart-plus"
-    } else {
-        let buttonClick = event.target.product
-        buttonClick.event.remove()
     }
+    
 
     window.localStorage.setItem("addItensCar", JSON.stringify(addItensCar));//save it in local storage
 }

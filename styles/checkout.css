@@ -43,3 +43,9 @@
 #priceProduct{
     padding-top: 3rem;
 }
+#deleteItens{
+
+    background-color: aquamarine;
+    width:70px;
+    height: 20px;
+}

@@ -35,7 +35,7 @@ const createPriceDiv = (price) => {
     const priceDiv = document.createElement("div");
     priceDiv.id = "priceProduct";
     priceDiv.innerHTML = price;
-    
+
     return priceDiv;
 
 };
@@ -44,23 +44,38 @@ const createItemDiv = (product) =>{
     
     const div = document.createElement("div"); // create element div
     div.id = "createItem"; // create um id
+   
 
     const image = createImageDiv(product.image); // create a img and show image in html
     div.appendChild(image); //puuting image in div
+   
 
     const span = document.createElement('span');
     span.id= 'detailsText'
     div.appendChild(span)
+    
 
     const title = createTitleDiv(product.title); // create a div and show title in html
     span.appendChild(title); //colocando o title na div
+ 
 
     const price = createPriceDiv(product.price); // create a div and show title in html
     span.appendChild(price); //colocando o price na div
-  
+
+    const iconCart = document.createElement("a")
+    iconCart.className = 'fas fa-minus-square'
+    iconCart.id='iconCart'
+    iconCart.addEventListener('click', removeItem)
+    span.appendChild(iconCart)
 
     return div //retarn a div
 }
+
+const removeItem = (event) => {
+    if (event.target.className === 'fas fa-minus-square')
+    return itensCar.splice()
+  };
+
 
 const updateUi = (products) => {
     const itensCar = document.getElementById('itensCar') // getting div 
@@ -70,9 +85,12 @@ const updateUi = (products) => {
     products.forEach((product) => {
         const itemDiv = createItemDiv(product) //create a product and show the
         itensCar.appendChild(itemDiv)//add item a product list
+
     })
-   
     
+ 
+
+
 }
 
 
