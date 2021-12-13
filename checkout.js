@@ -31,6 +31,14 @@ const createTitleDiv = (title) => {
 
     return titleDiv; // return titlediv
 };
+const createPriceDiv = (price) => {
+    const priceDiv = document.createElement("div");
+    priceDiv.id = "priceProduct";
+    priceDiv.innerHTML = price;
+    
+    return priceDiv;
+
+};
 
 const createItemDiv = (product) =>{
     
@@ -41,10 +49,14 @@ const createItemDiv = (product) =>{
     div.appendChild(image); //puuting image in div
 
     const span = document.createElement('span');
+    span.id= 'detailsText'
     div.appendChild(span)
 
     const title = createTitleDiv(product.title); // create a div and show title in html
-    span.appendChild(title); //colocando o tilte na div
+    span.appendChild(title); //colocando o title na div
+
+    const price = createPriceDiv(product.price); // create a div and show title in html
+    span.appendChild(price); //colocando o price na div
   
 
     return div //retarn a div
