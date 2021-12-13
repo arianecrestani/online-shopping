@@ -9,6 +9,7 @@ const loadCar = () => {
         addItensCar = JSON.parse(storage);
     }  
     updateUi(addItensCar)
+    console.log(addItensCar)
 }
 
 

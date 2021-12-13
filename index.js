@@ -110,7 +110,6 @@ const createProductSection = (product) => {
     span.appendChild(iconHeart)
 
     const iconCart = document.createElement('a')
-    iconCart.href = `./checkout.html`
     // const isInCar = getCarIndex(product) >= 0
     // iconCart.className = isInCar ? 'fas fa-cart-plus' : 'fas fa-cart-plus' 
     iconCart.className = 'fas fa-cart-plus'
@@ -181,7 +180,7 @@ const addFavoriteItem = (event) => {
     if(event.target.className === 'far fa-heart') {
         favoriteList.push(event.target.product)
         event.target.className = "fas fa-heart"
-    }else {
+    } else {
         const indexOf = getFavoriteIndex(event.target.product)
         favoriteList.splice(indexOf, 1);
         event.target.className = 'far fa-heart'
@@ -195,14 +194,17 @@ const btnFavoriteList = () => {
 
 // add itens in the car
 const addToCar = (event) => {
-    if(event.target.className === 'far fa-cart-plus') {
+    let addItensCar = []
+    let storage = window.localStorage.getItem("addItensCar");
+    
+    if(storage !== null) {
+        addItensCar = JSON.parse(storage);
+    }  
+
+    if(event.target.className === 'fas fa-cart-plus') {
         addItensCar.push(event.target.product)
         event.target.className = "fas fa-cart-plus"
-     } 
-    //  else {
-    //     const indexOf = getCarIndex(event.target.product)
-    //     addItensCar.splice(indexOf, 1);
-    //     event.target.className = 'far fa-cart-plus'
-    // }
-    localStorage.setItem("addItensCar", JSON.stringify(addItensCar));
+    } // else remove
+
+    window.localStorage.setItem("addItensCar", JSON.stringify(addItensCar));
 }
