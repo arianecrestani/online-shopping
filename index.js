@@ -195,9 +195,9 @@ const btnFavoriteList = () => {
 // add itens in the car
 const addToCar = (event) => {
     let addItensCar = []
-    let storage = window.localStorage.getItem("addItensCar");
+    let storage = window.localStorage.getItem("addItensCar");//The getItem() method of the Storage interface, when passed a key name, will return that key's value, or null if the key does not exist, in the given Storage object.
     
-    if(storage !== null) {
+    if(storage !== null) { //A DOMString containing the value of the key. If the key does not exist, null is returned.
         addItensCar = JSON.parse(storage);
     }  
 
@@ -206,5 +206,5 @@ const addToCar = (event) => {
         event.target.className = "fas fa-cart-plus"
     } // else remove
 
-    window.localStorage.setItem("addItensCar", JSON.stringify(addItensCar));
+    window.localStorage.setItem("addItensCar", JSON.stringify(addItensCar));//save it in local storage
 }
