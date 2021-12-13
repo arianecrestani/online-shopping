@@ -9,7 +9,7 @@ const apiRequest = async (endpoint) => {
         .catch((error) => console.log(error));
 };
  
-const getProducts = () => `products?limit=10`;
+const getProducts = () => `products?limit=15`;
 const getSalesProducts = () => `products?sort=desc`;
 const getElectroProducts = () => `products/category/electronics`;
 const getJeweleryProducts = () => `products/category/jewelery`;
