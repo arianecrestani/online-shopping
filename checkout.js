@@ -1,4 +1,4 @@
-
+//remove e redesgner the list 
 let addItensCar = []
 
 const loadCar = () => {
@@ -44,7 +44,12 @@ const createItemDiv = (product) =>{
     
     const div = document.createElement("div"); // create element div
     div.id = "createItem"; // create um id
-   
+
+    const iconCart = document.createElement("a")
+    iconCart.className = 'fas fa-minus-square'
+    iconCart.id='iconCart'
+    // div.addEventListener('click', removeItem)
+    div.appendChild(iconCart)
 
     const image = createImageDiv(product.image); // create a img and show image in html
     div.appendChild(image); //puuting image in div
@@ -62,19 +67,10 @@ const createItemDiv = (product) =>{
     const price = createPriceDiv(product.price); // create a div and show title in html
     span.appendChild(price); //colocando o price na div
 
-    const iconCart = document.createElement("a")
-    iconCart.className = 'fas fa-minus-square'
-    iconCart.id='iconCart'
-    iconCart.addEventListener('click', removeItem)
-    span.appendChild(iconCart)
+ 
 
     return div //retarn a div
 }
-
-const removeItem = (event) => {
-    if (event.target.className === 'fas fa-minus-square')
-    return itensCar.splice()
-  };
 
 
 const updateUi = (products) => {
