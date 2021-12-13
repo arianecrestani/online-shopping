@@ -17,6 +17,13 @@ const loading = () => {
     loadCar()
 };
 
+const createImageDiv = (image) => {
+    const imageDiv = document.createElement("img"); // create element div
+    imageDiv.id = "imageProduct"; // create a id to a div
+    imageDiv.src = image; // putting a imagem to div 
+    return imageDiv; // retonando a div
+};
+
 const createTitleDiv = (title) => {
     const titleDiv = document.createElement("div"); // cria uma div 
     titleDiv.id = "titleProduct"; // create a id to a div
@@ -25,23 +32,20 @@ const createTitleDiv = (title) => {
     return titleDiv; // return titlediv
 };
 
-const createImageDiv = (image) => {
-    const imageDiv = document.createElement("img"); // create element div
-    imageDiv.id = "imageProduct"; // create a id to a div
-    imageDiv.src = image; // putting a imagem to div 
-    return imageDiv; // retonando a div
-};
-
 const createItemDiv = (product) =>{
     
     const div = document.createElement("div"); // create element div
-    div.id = "createItem"; // create um id para ela
+    div.id = "createItem"; // create um id
 
-    const title = createTitleDiv(product.title); // create a div and show title in html
-    div.appendChild(title); //colocando o tilte na div
-  
     const image = createImageDiv(product.image); // create a img and show image in html
     div.appendChild(image); //puuting image in div
+
+    const span = document.createElement('span');
+    div.appendChild(span)
+
+    const title = createTitleDiv(product.title); // create a div and show title in html
+    span.appendChild(title); //colocando o tilte na div
+  
 
     return div //retarn a div
 }
