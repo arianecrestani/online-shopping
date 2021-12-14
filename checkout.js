@@ -2,7 +2,7 @@
 let addItensCar = []
 
 const loadCar = () => {
-    let storage = window.localStorage.getItem("addItensCar");// 
+    let storage = window.localStorage.getItem("addItensCar");// The getItem() method returns value of the specified Storage Object item.
     if(storage === null) {
         addItensCar = [];
     } else {
@@ -13,8 +13,18 @@ const loadCar = () => {
 }
 
 
+let itemToRemove = [];
+
+const removeItemCar = (product) => {
+    console.log('kkkkkk')
+   
+
+}
+
+
 const loading = () => {
     loadCar()
+
 };
 
 const createImageDiv = (image) => {
@@ -45,52 +55,41 @@ const createItemDiv = (product) =>{
     const div = document.createElement("div"); // create element div
     div.id = "createItem"; // create um id
 
-    const iconCart = document.createElement("a")
-    iconCart.className = 'fas fa-minus-square'
-    iconCart.id='iconCart'
-    // const isInTheCar = getItemIndex(product) >= 0
-    // iconCart.className = isInTheCar ? 'fas fa-minus-square' : 'fas fa-cart-plus'
-    // iconCart.product=product
-    // div.addEventListener('click', removeItem)
-    div.appendChild(iconCart)
-
-    const image = createImageDiv(product.image); // create a img and show image in html
-    div.appendChild(image); //puuting image in div
+    const removeItemCar = document.createElement("a")
+    removeItemCar.className = 'fas fa-minus-square'
+    removeItemCar.id='iconCart'
+    div.appendChild(removeItemCar)
+    removeItemCar.addEventListener('click',()=>{
+        console.log(product)
+        let newCart = addItensCar.filter(function(cartItem) {
+            console.log(cartItem)
+            return cartItem.id !== product.id;
    
-
-    const span = document.createElement('span');
-    span.id= 'detailsText'
-    div.appendChild(span)
-    
+       })
+       localStorage.setItem("addItensCar",JSON.stringify (newCart));
+       loadCar() 
+    })
 
     const title = createTitleDiv(product.title); // create a div and show title in html
-    span.appendChild(title); //colocando o title na div
+    div.appendChild(title); //colocando o title na div
  
 
     const price = createPriceDiv(product.price); // create a div and show title in html
-    span.appendChild(price); //colocando o price na div
+    div.appendChild(price); //colocando o price na div
 
- 
+    const image = createImageDiv(product.image); // create a img and show image in html
+    div.appendChild(image); 
+
 
     return div //retarn a div
 }
 
-// const getItemIndex = (product) => {
-//     for (let i = 0; i < addItensCar.length; i++) {
-//         const isInTheCar = addItensCar[i];
-//         if (isInTheCar.id === product.id) {
-//             return i;
-//         }
-//     }
-// }
 
-// const removeItem = (event) => {
-//    const indexOf = getItemIndex(event.target.product)
-//     addItensCar.splice(indexOf, 1);
-//     event.target.className = 'far fa-heart'
-   
-//     localStorage.setItem("addItensCar", JSON.stringify(addItensCar));
-// }
+
+const changeNumberOfUnits = () => {
+  
+
+}
 
 
 
@@ -105,7 +104,6 @@ const updateUi = (products) => {
         itensCar.appendChild(itemDiv)//add item a product list
 
     })
-
 
 }
 

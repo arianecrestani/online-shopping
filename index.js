@@ -206,4 +206,5 @@ const addToCar = (event) => {
     
 
     window.localStorage.setItem("addItensCar", JSON.stringify(addItensCar));//save it in local storage
+    //O método setItem() da interface Storage, quando passado 'chave' e 'valor', irá adicionar esta chave ao storage, ou atualizar o valor caso a chave já exista.
 }
