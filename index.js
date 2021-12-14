@@ -61,13 +61,6 @@ const createTitle = (title) => {
 
     return titleDiv;
 };
-// const createDescription = (description) => {
-//     const descriptionDiv = document.createElement("div");
-//     descriptionDiv.id = "descriptionProduct";
-//     descriptionDiv.innerHTML = description;
-
-//     return descriptionDiv;
-// };
 
 const createPrice = (price) => {
     const priceDiv = document.createElement("div");
@@ -121,9 +114,6 @@ const createProductSection = (product) => {
 
     const title = createTitle(product.title);
     div.appendChild(title);
-
-    // const description = createDescription(result.description);
-    // div.appendChild(description); // description going to another page (productDetail)
 
     const price = createPrice(product.price);
     div.appendChild(price);
@@ -203,7 +193,6 @@ const addToCar = (event) => {
         addItensCar.push(event.target.product)
         event.target.className = "fas fa-cart-plus"
     }
-    
 
     window.localStorage.setItem("addItensCar", JSON.stringify(addItensCar));//save it in local storage
     //O método setItem() da interface Storage, quando passado 'chave' e 'valor', irá adicionar esta chave ao storage, ou atualizar o valor caso a chave já exista.
