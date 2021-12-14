@@ -15,12 +15,6 @@ const loadCar = () => {
 
 let itemToRemove = [];
 
-const removeItemCar = (product) => {
-    console.log('kkkkkk')
-   
-
-}
-
 
 const loading = () => {
     loadCar()
@@ -56,10 +50,10 @@ const createItemDiv = (product) =>{
     div.id = "createItem"; // create um id
 
     const removeItemCar = document.createElement("a")
-    removeItemCar.className = 'fas fa-minus-square'
+    removeItemCar.className = 'fas fas fa-trash'
     removeItemCar.id='iconCart'
     div.appendChild(removeItemCar)
-    removeItemCar.addEventListener('click',()=>{
+    removeItemCar.addEventListener('click',()=> {
         console.log(product)
         let newCart = addItensCar.filter(function(cartItem) {
             console.log(cartItem)
