@@ -70,15 +70,22 @@ const createItemDiv = (product) =>{
        loadCar() 
     })
 
+    const image = createImageDiv(product.image); // create a img and show image in html
+    div.appendChild(image); //puuting image in div
+   
+
+    const span = document.createElement('span');
+    span.id= 'detailsText'
+    div.appendChild(span)
+    
+
     const title = createTitleDiv(product.title); // create a div and show title in html
-    div.appendChild(title); //colocando o title na div
+    span.appendChild(title); //colocando o title na div
  
 
     const price = createPriceDiv(product.price); // create a div and show title in html
-    div.appendChild(price); //colocando o price na div
-
-    const image = createImageDiv(product.image); // create a img and show image in html
-    div.appendChild(image); 
+    span.appendChild(price); //colocando o price na div
+  
 
 
     return div //retarn a div
