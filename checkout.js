@@ -54,11 +54,8 @@ const createItemDiv = (product) =>{
     removeItemCar.id='iconCart'
     div.appendChild(removeItemCar)
     removeItemCar.addEventListener('click',()=> {
-        console.log(product)
         let newCart = addItensCar.filter(function(cartItem) {
-            console.log(cartItem)
             return cartItem.id !== product.id;
-   
        })
        localStorage.setItem("addItensCar",JSON.stringify (newCart));
        loadCar() 
