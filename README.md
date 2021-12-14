@@ -1,60 +1,54 @@
-# online-shopping
+# OnlineShopping
 
- https://arianecrestani.github.io/online-shopping/
+We created this onlineShopping as a final project of JavaScript Course by [ReDI School](https://www.redi-school.org/)
 
-# Header part
-- navigation menu
- - all
- - jewelry
- - women's clothing
- - men's clothing
-- about
-- contact
-- home
-- checkout
-- show bag/basket/cart
-- show favorites
-- search
-​
-​
-# Content
- - a list of products
-   - for each product you will show
-     - image of the product
-     - title
-     - price
-- next button to see next 10 products
-- previous button to see previous 10 products
-- sort products by price or review
-- click on a product to open detail page
-​
-# Product Detail Page
-- for the clicked on product show
-  - title
-  - image
-  - price
-  - rating (optional)
-- add to bag/basket/cart
-- add to favorites
-- back button
-​
-# Show bag/basket/cart page
-- table of 
-  |small image of product|title of product|price of product|
-  |small image of product|title of product|price of product|
-  |small image of product|title of product|price of product|
-  ----------------------------------------------------------
-  total: xxx
-- checkout
-- back
-​
-# Footer
-- social media links
-- chat
-- my account (OPTIONAL!!!)
-- help/support
-​
-# Favorites
-- show products
-  - image and title
+
+## Overview
+
+Users should be able to:
+
+- View the optimal layout for each page depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Select products by any category
+- See product's details
+- Set any product as favorite
+- Check all the favorite
+
+### Screenshot
+
+![](./screenshot.png)
+
+
+### Link
+
+- Live Site URL: [OnlineShop](https://arianecrestani.github.io/online-shopping/)
+
+## Our process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-friendly
+- Vanilla JavaScript
+- [Fake Store API](https://fakestoreapi.com/docs)
+
+
+### What We learned
+
+```js
+fetch('http://example.com/.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+localStorage.setItem('item1', 'item2');
+```
+
+
+## Authors
+
+- linkedin - [Ariane Crestani](https://www.linkedin.com/in/ariane-crestani-14910ba4/)
+- linkedin - [Parvaneh Ramezani](https://www.linkedin.com/in/parvaneh-ramezani)
+- linkedin - [Tamiris Cristine](https://www.linkedin.com/in/tamiris-cristine/)
 ​
