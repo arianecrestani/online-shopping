@@ -1,4 +1,4 @@
-//remove e redesgner the list 
+//remove e redesigner the list 
 let addItensCar = []
 
 const loadCar = () => {
@@ -48,6 +48,9 @@ const createItemDiv = (product) =>{
     const iconCart = document.createElement("a")
     iconCart.className = 'fas fa-minus-square'
     iconCart.id='iconCart'
+    // const isInTheCar = getItemIndex(product) >= 0
+    // iconCart.className = isInTheCar ? 'fas fa-minus-square' : 'fas fa-cart-plus'
+    // iconCart.product=product
     // div.addEventListener('click', removeItem)
     div.appendChild(iconCart)
 
@@ -72,6 +75,25 @@ const createItemDiv = (product) =>{
     return div //retarn a div
 }
 
+// const getItemIndex = (product) => {
+//     for (let i = 0; i < addItensCar.length; i++) {
+//         const isInTheCar = addItensCar[i];
+//         if (isInTheCar.id === product.id) {
+//             return i;
+//         }
+//     }
+// }
+
+// const removeItem = (event) => {
+//    const indexOf = getItemIndex(event.target.product)
+//     addItensCar.splice(indexOf, 1);
+//     event.target.className = 'far fa-heart'
+   
+//     localStorage.setItem("addItensCar", JSON.stringify(addItensCar));
+// }
+
+
+
 
 const updateUi = (products) => {
     const itensCar = document.getElementById('itensCar') // getting div 
@@ -83,8 +105,6 @@ const updateUi = (products) => {
         itensCar.appendChild(itemDiv)//add item a product list
 
     })
-    
- 
 
 
 }
