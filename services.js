@@ -16,3 +16,5 @@ const getJeweleryProducts = () => `products/category/jewelery`;
 const getMensProducts = () => `products/category/men's%20clothing`;
 const getWomenProducts = () => `products/category/women's%20clothing`;
 const getSingleProduct = (item) => `products/${item}`;
+// const getSingleCart = (id) => `carts/${id}`;
+

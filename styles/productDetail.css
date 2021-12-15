@@ -91,19 +91,19 @@ html {
     /* display: block; */
 }
 
-.footer {
+/* .footer{
 
     position: relative;
     width: 80%;
     clear: both;
-    /* height: 20vh; */
+    height: 20vh;
     background-color: #b0e0e6;
     color: rgb(62, 88, 158);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
-}
+} */
 
 .fa {
     padding: 5px;

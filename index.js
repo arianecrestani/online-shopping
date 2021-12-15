@@ -46,6 +46,10 @@ const btnSalesProducts = () => {
     apiRequest(getSalesProducts())
     .then((json) => updateUi(json));
 };
+// const btnCheckout = () => {
+//     apiRequest(getSingleCart())
+//     .then((json) => updateUi(json));
+// };
 
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
@@ -136,10 +140,12 @@ const createProductSection = (product) => {
 };
 
 const updateUi = (products) => {
-
+    // console.log ("starting UpdateUi");
     const productsListDiv = document.getElementById('products')//there are a div in html
     productsListDiv.innerHTML = ''
-
+    
+    // console.log ("Start fetch");
+    
     products.forEach(product => {
         const divElement = {
             id: product.id,
