@@ -13,11 +13,9 @@ const loadCar = () => {
 }
 
 
-let itemToRemove = [];
-
-
 const loading = () => {
     loadCar()
+
 
 };
 
@@ -57,7 +55,7 @@ const createItemDiv = (product) =>{
         let newCart = addItensCar.filter(function(cartItem) {
             return cartItem.id !== product.id;
        })
-       localStorage.setItem("addItensCar",JSON.stringify (newCart));
+       localStorage.setItem("addItensCar",JSON.stringify (newCart));//remove itens from storage
        loadCar() 
     })
 
@@ -83,14 +81,19 @@ const createItemDiv = (product) =>{
 }
 
 
+const updateSumTotal = (products) => {
+    
+    let total = 0
+    products.forEach((product) => {
+        total = total + product.price
+    })
+    
+    const sumtotal = document.getElementById('sumTotal')
+    sumtotal.innerHTML = total;
 
-const changeNumberOfUnits = () => {
-  
-
+    
+    
 }
-
-
-
 
 const updateUi = (products) => {
     const itensCar = document.getElementById('itensCar') // getting div 
@@ -100,7 +103,6 @@ const updateUi = (products) => {
     products.forEach((product) => {
         const itemDiv = createItemDiv(product) //create a product and show the
         itensCar.appendChild(itemDiv)//add item a product list
-
     })
 
 }
