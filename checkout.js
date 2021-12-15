@@ -81,20 +81,6 @@ const createItemDiv = (product) => {
 }
 
 
-const updateSumTotal = (products) => {
-    
-    let total = 0
-    products.forEach((product) => {
-        total = total + product.price
-    })
-    
-    const sumtotal = document.getElementById('sumTotal')
-    sumtotal.innerHTML = total;
-
-    
-    
-}
-
 const updateUi = (products) => {
     const itensCar = document.getElementById('itensCar') // getting div 
     itensCar.innerHTML = '' // cleaning itens 
