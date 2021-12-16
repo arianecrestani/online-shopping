@@ -96,8 +96,8 @@ const updateUi = (products) => {
     })
 
     const sumPriceDiv = document.createElement("div");
-    sumPriceDiv.id = "sum";
-    sumPriceDiv.innerHTML = sum;
+    sumPriceDiv.id = "totalSum";
+    sumPriceDiv.innerHTML = `Total $${sum}`
 
 
     itensCar.appendChild(sumPriceDiv)

@@ -17,12 +17,19 @@ html {
     display: flex;
     width: 100%;
     flex-direction: column;
+    
 }
 
 #createItem{
     display: flex;
-    padding-left:10rem;
-    padding-top: 4rem;
+    width: 40rem;
+    height: auto;
+    padding: 1rem;
+    margin-left: 10rem;
+    justify-content: baseline;
+   
+     box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 10%),
+    0px 2px 2px 0px rgb(0 0 0 / 10%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
     
 }
 #imageProduct{
@@ -36,10 +43,7 @@ html {
     display: flex;
     flex-direction: column;
     /* padding-right: 3rem; */
-    height: 0.5px;
-    border: solid 0.5px;
-    border-color:lightgray;
-    padding-left: 3rem;
+    padding-left: 5rem;
     
 }
 #titleProduct{
@@ -56,13 +60,19 @@ html {
     width:70px;
     height: 20px;
 }
+#totalSum{
+    display: flex;
+    padding: 3rem;
+    justify-content:center;
+    font-size: larger;
+    
+}
 
 
 
 /* footer */
 .footer-container {
     background-color: #b0e0e6;
-    padding: 4rem 0 4rem 0;
     /* display: block; */
 }
 
