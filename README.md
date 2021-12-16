@@ -13,6 +13,8 @@ Users should be able to:
 - See product's details
 - Set any product as favorite
 - Check all the favorite
+- Add and delete products in the cart
+- Check the total sum of the products in the cart
 
 ### Screenshot
 
