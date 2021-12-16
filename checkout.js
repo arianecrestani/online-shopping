@@ -10,13 +10,10 @@ const loadCar = () => {
     }
     updateUi(addItensCar)
     console.log(addItensCar)
-}
-
+};
 
 const loading = () => {
     loadCar()
-
-
 };
 
 const createImageDiv = (image) => {
@@ -33,6 +30,7 @@ const createTitleDiv = (title) => {
 
     return titleDiv; // return titlediv
 };
+
 const createPriceDiv = (price) => {
     const priceDiv = document.createElement("div");
     priceDiv.id = "priceProduct";
@@ -78,14 +76,12 @@ const createItemDiv = (product) => {
 
 
     return div //retarn a div
-}
-
+};
 
 const updateUi = (products) => {
     const itensCar = document.getElementById('itensCar') // getting div 
     itensCar.innerHTML = '' // cleaning itens 
-    sum = 0;
-
+    let sum = 0;
 
     // from products return a product 
     products.forEach((product) => {
@@ -99,8 +95,9 @@ const updateUi = (products) => {
     sumPriceDiv.id = "totalSum";
     sumPriceDiv.innerHTML = `Total $${sum}`
 
-
-    itensCar.appendChild(sumPriceDiv)
+    if(sum > 0) {
+        itensCar.appendChild(sumPriceDiv)        
+    }
 }
 
 
