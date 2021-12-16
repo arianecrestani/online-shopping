@@ -46,10 +46,6 @@ const btnSalesProducts = () => {
     apiRequest(getSalesProducts())
     .then((json) => updateUi(json));
 };
-// const btnCheckout = () => {
-//     apiRequest(getSingleCart())
-//     .then((json) => updateUi(json));
-// };
 
 const createImage = (image) => {
     const imageDiv = document.createElement("div");
@@ -69,7 +65,7 @@ const createTitle = (title) => {
 const createPrice = (price) => {
     const priceDiv = document.createElement("div");
     priceDiv.id = "priceProduct";
-    priceDiv.innerHTML = price;
+    priceDiv.innerHTML = "$ " + price;
     return priceDiv;
 
 };
@@ -152,7 +148,7 @@ const updateUi = (products) => {
             title: product.title,
             image: product.image,
             // description: product.description,
-            price: "$" + product.price,
+            price: product.price,
             rating: product.rating.rate ? product.rating.rate : product.rating
         }
         const productDiv = createProductSection(divElement);

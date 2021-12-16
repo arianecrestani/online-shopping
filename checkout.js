@@ -34,7 +34,7 @@ const createTitleDiv = (title) => {
 const createPriceDiv = (price) => {
     const priceDiv = document.createElement("div");
     priceDiv.id = "priceProduct";
-    priceDiv.innerHTML = price;
+    priceDiv.innerHTML = "$ " + price;
 
     return priceDiv;
 
@@ -87,10 +87,12 @@ const updateUi = (products) => {
     products.forEach((product) => {
 
         const itemDiv = createItemDiv(product) //create a product and show the
-        sum += parseFloat(product.price.substring(1))
+        sum += parseFloat(product.price)
+        console.log(parseFloat(product.price))
+  
         itensCar.appendChild(itemDiv)//add item a product list
     })
-
+    console.log(sum)
     const sumPriceDiv = document.createElement("div");
     sumPriceDiv.id = "totalSum";
     sumPriceDiv.innerHTML = `Total $${sum}`
