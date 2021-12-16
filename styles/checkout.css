@@ -20,10 +20,12 @@ html {
     display: flex;
     width: 100%;
     flex-direction: column;
+    padding: 2rem;
     
 }
 
 #createItem{
+    padding: 2rem;
     display: flex;
     width: 40rem;
     height: auto;
@@ -52,10 +54,12 @@ html {
 #titleProduct{
    padding-right: 3rem;
    padding-top: 2rem;
+   font-size: 20px;
     
 }
 #priceProduct{
     padding-top: 3rem;
+    font-size: 18px;
 }
 #deleteItens{
 
@@ -67,7 +71,7 @@ html {
     display: flex;
     padding: 3rem;
     justify-content:center;
-    font-size: larger;
+    font-size: 30px;
     
 }
 
