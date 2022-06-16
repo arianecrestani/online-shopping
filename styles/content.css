@@ -16,13 +16,14 @@ body {
   flex-direction: row;
   justify-content: center;
 }
-#products{
+#products {
   display: flex;
   width: 100%;
+  min-height: 90vh;
   flex-wrap: wrap;
   justify-content: center;
 }
-#productSection{
+#productSection {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,8 +36,7 @@ body {
   margin-left: 22px;
   margin-bottom: 32px;
   margin-top: 20px;
-  color: black; 
-
+  color: black;
 }
 #productSection span {
   align-self: flex-end;
@@ -54,16 +54,16 @@ body {
   padding-left: 0.5rem;
   text-decoration: none;
   color: rgb(62, 88, 158);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 #iconHeart {
   font-size: 1.5rem;
   text-decoration: none;
   color: rgb(62, 88, 158);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-#iconCart:hover{
+#iconCart:hover {
   color: rgb(206, 136, 148);
 }
 #iconHeart:hover {
@@ -79,7 +79,7 @@ body {
   padding: 5px 10px;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 8px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .seeDetailBtn:hover {
   color: rgb(206, 136, 148);
@@ -88,19 +88,17 @@ body {
 #titleProduct {
   margin: 5px 0;
   padding: 0.8rem;
-  font-family: HelveticaNow,Helvetica,sans-serif;
+  font-family: HelveticaNow, Helvetica, sans-serif;
 }
 #priceProduct {
   margin-bottom: 5px;
   font-size: 1.1rem;
-
 }
-#iconStar{
+#iconStar {
   color: rgb(62, 88, 158);
   display: flex;
   text-decoration: none;
   padding: 2px;
-
 }
 .previous {
   background-color: #f1f1f1;
@@ -119,6 +117,6 @@ body {
   justify-content: center;
   padding: 20px;
 }
-.footer{
+.footer {
   padding: 2rem;
 }

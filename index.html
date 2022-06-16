@@ -1,124 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/a0e4aef26a.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fleur%20De%20Leah&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a0e4aef26a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fleur%20De%20Leah&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./styles/baseIndex.css" />
-  
-    <title>onlineShopping</title>
-</head>
 
-<body onload="loading()">
+    <title>onlineShopping</title>
+  </head>
+
+  <body onload="loading()">
     <header>
-        <nav class="nav-bar">
-            <h1 class="logo">Online Shop</h1>
-            <ul class="nav-links">
-                <li><a onclick="loading()" href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li class="dropdown">
-                    <a class="dropbtn" href="#">Products</a>
-                    <div class="dropdown-content">
-                        <a onclick="loading()" href="#">All</a>
-                        <a onclick="btnElectroProducts()" href="#">Electronics</a>
-                        <a onclick="btnJeweleryProducts()" href="#">Jewelery</a>
-                        <a onclick="btnMensProducts()" href="#">Men's Clothing</a>
-                        <a onclick="btnWomenProducts()" href="#">Women's Clothing</a>
-                        <a onclick="btnSalesProducts()" href="#">Sales</a>
-                    </div>
-                </li>
-            </ul>
-            <div class="nav-icons">
-                <a href="./checkout.html" onclick="btnCarItens()"><i class="fas fa-shopping-cart"></i></a>
-                <!-- <a href="#" onclick="btnCheckout()"><i class="fas fa-shopping-cart"></i></a> -->
-                <a href="#" onclick="btnFavoriteList()"><i class="fas fa-heart"></i></a>
+      <nav class="nav-bar">
+        <h1 class="logo">Online Shop</h1>
+        <ul class="nav-links">
+          <li><a onclick="loading()" href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown">
+            <a class="dropbtn" href="#">Products</a>
+            <div class="dropdown-content">
+              <a onclick="loading()" href="#">All</a>
+              <a onclick="btnElectroProducts()" href="#">Electronics</a>
+              <a onclick="btnJeweleryProducts()" href="#">Jewelery</a>
+              <a onclick="btnMensProducts()" href="#">Men's Clothing</a>
+              <a onclick="btnWomenProducts()" href="#">Women's Clothing</a>
+              <a onclick="btnSalesProducts()" href="#">Sales</a>
             </div>
-        </nav>
+          </li>
+        </ul>
+        <div class="nav-icons">
+          <a href="./checkout.html" onclick="btnCarItens()"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <!-- <a href="#" onclick="btnCheckout()"><i class="fas fa-shopping-cart"></i></a> -->
+          <a href="#" onclick="btnFavoriteList()"
+            ><i class="fas fa-heart"></i
+          ></a>
+        </div>
+      </nav>
     </header>
     <!-- <div id="container"></div> -->
     <div class="content">
-    <div id="products">
+      <div id="products">Loading...</div>
     </div>
-</div>
 
     <section class="about-container" id="about">
-        <h2 class="about-title">The Developers</h2>
-        <p class="about-info">This page is a final JavaScript project of <a class="about-redi" target="_blank"
-                href="https://www.redi-school.org/">ReDI School</a>
-        </p>
-        <div class="about">
-            <div class="profile">
-                <img class="profile-img" src="https://avatars.githubusercontent.com/u/67700408?v=4"
-                    alt="profile picture">
-                <p class="profile-name">Ariane Crestani</p>
-                <p class="profile-position">JavaScript Student</p>
-                <a class="profile-link" target="_blank" href="https://github.com/arianecrestani"><i
-                        class="fab fa-github"></i></a>
-            </div>
-            <div class="profile">
-                <img class="profile-img" src="https://avatars.githubusercontent.com/u/92104490?v=4"
-                    alt="profile picture">
-                <p class="profile-name">Parvaneh Ramezani</p>
-                <p class="profile-position">JavaScript Student</p>
-                <a class="profile-link" target="_blank" href="https://github.com/ParvanehRamezani"><i
-                        class="fab fa-github"></i></a>
-            </div>
-            <div class="profile">
-                <img class="profile-img" src="https://avatars.githubusercontent.com/u/44439100?v=4"
-                    alt="profile picture">
-                <p class="profile-name">Tamiris Cristine</p>
-                <p class="profile-position">JavaScript Student</p>
-                <a class="profile-link" target="_blank" href="https://github.com/TamirisCss"><i
-                        class="fab fa-github"></i></a>
-            </div>
+      <h2 class="about-title">The Developers</h2>
+      <p class="about-info">
+        This page is a final JavaScript project of
+        <a
+          class="about-redi"
+          target="_blank"
+          href="https://www.redi-school.org/"
+          >ReDI School</a
+        >
+      </p>
+      <div class="about">
+        <div class="profile">
+          <img
+            class="profile-img"
+            src="https://avatars.githubusercontent.com/u/67700408?v=4"
+            alt="profile picture"
+          />
+          <p class="profile-name">Ariane Crestani</p>
+          <p class="profile-position">JavaScript Student</p>
+          <a
+            class="profile-link"
+            target="_blank"
+            href="https://github.com/arianecrestani"
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
+        <div class="profile">
+          <img
+            class="profile-img"
+            src="https://avatars.githubusercontent.com/u/92104490?v=4"
+            alt="profile picture"
+          />
+          <p class="profile-name">Parvaneh Ramezani</p>
+          <p class="profile-position">JavaScript Student</p>
+          <a
+            class="profile-link"
+            target="_blank"
+            href="https://github.com/ParvanehRamezani"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <div class="profile">
+          <img
+            class="profile-img"
+            src="https://avatars.githubusercontent.com/u/44439100?v=4"
+            alt="profile picture"
+          />
+          <p class="profile-name">Tamiris Cristine</p>
+          <p class="profile-position">JavaScript Student</p>
+          <a
+            class="profile-link"
+            target="_blank"
+            href="https://github.com/TamirisCss"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer">
-                <div class="footer-heading footer-1">
-                    <h2>Contact Us</h2>
-                    <a href="#">Payment</a>
-                    <a href="#">Delivery and Shiping</a>
-                    <a href="#">Support</a>
-                    <a href="#">Contact</a>
-                </div>
-                <div class="footer-heading footer-2">
-                    <h2>About Us</h2>
-                    <a href="#">Stores</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Returns Policy</a>
-                    <a href="#">Terms of services</a>
-
-                </div>
-                <div class="footer-heading footer-3">
-                    <h2>Social Media</h2>
-                    <div class="social-media">
-
-                        <a href="#" class="fa fa-instagram"></a>
-                        <a href="#" class="fa fa-telegram"></a>
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                    </div>
-
-                </div>
-                <div class="footer-email-form">
-                    <h2>Join our news letter </h2>
-                    <input type="email" placeholder="Enter your email address" id="footer-email">
-                    <input type="submit" value="Sign Up" id="footer-email-btn">
-                </div>
+      <div class="footer-container">
+        <div class="footer">
+          <div class="footer-heading footer-1">
+            <h2>Contact Us</h2>
+            <a href="#">Payment</a>
+            <a href="#">Delivery and Shiping</a>
+            <a href="#">Support</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-heading footer-2">
+            <h2>About Us</h2>
+            <a href="#">Stores</a>
+            <a href="#">Careers</a>
+            <a href="#">Returns Policy</a>
+            <a href="#">Terms of services</a>
+          </div>
+          <div class="footer-heading footer-3">
+            <h2>Social Media</h2>
+            <div class="social-media">
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-telegram"></a>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
             </div>
+          </div>
+          <div class="footer-email-form">
+            <h2>Join our news letter</h2>
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              id="footer-email"
+            />
+            <input type="submit" value="Sign Up" id="footer-email-btn" />
+          </div>
         </div>
-
+      </div>
     </footer>
     <script src="services.js"></script>
     <script src="index.js"></script>
     <script src="checkout.js"></script>
-</body>
-
+  </body>
 </html>
